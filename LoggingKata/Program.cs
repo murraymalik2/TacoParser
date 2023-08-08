@@ -9,6 +9,7 @@ namespace LoggingKata
     {
         static readonly ILog logger = new TacoLogger();
         const string csvPath = "TacoBell-US-AL.csv";
+        const double MeterToMiles = 0.00062137;
 
         static void Main(string[] args)
         {
@@ -67,8 +68,8 @@ namespace LoggingKata
                 {
                     var locB= locations[j];
                     var corB = new GeoCoordinate();
-                    corA.Latitude = locB.Location.Latitude;
-                    corA.Longitude = locB.Location.Longitude;
+                    corB.Latitude = locB.Location.Latitude;
+                    corB.Longitude = locB.Location.Longitude;
                     
                     // Create a new Coordinate with your locB's lat and long
 
